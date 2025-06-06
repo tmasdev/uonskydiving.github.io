@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UoN Skydiving Club</title>
+
+    <!-- ‑‑‑‑‑‑ SIMPLE IN‑FILE STYLESHEET ‑‑‑‑‑‑ -->
+    <style>
+        /* RESET / GLOBAL ---------------------------------------------------- */
+        :root {
+            --brand-gold: rgb(215 181 61);
+            --header-grad-from: rgba(0 0 0 / 0.6);
+            --header-grad-mid:  rgba(0 0 0 / 0.3);
+            --social-size: 28px;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body            { height: 100%; display: flex; flex-direction: column; font-family: 'Soho', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+
+        /* HERO BACKGROUND --------------------------------------------------- */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: url('images/home_page_background.png') 50% 70%/cover no-repeat;
+            z-index: -1;           /* sits behind everything */
+        }
+
+        /* HEADER ------------------------------------------------------------ */
+        .site-header   {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 2rem;
+            color: #fff;
+        }
+
+        .site-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: -20px;
+            background: linear-gradient(
+                to bottom,
+                var(--header-grad-from) 0%,
+                var(--header-grad-mid)  75%,
+                transparent            100%);
+            z-index: -1;   /* stays behind header children */
+        }
+        .header-top    { width: 100%; display: flex; align-items: center; justify-content: space-between; }
+        .social        { display: flex; gap: 2rem; }
+        .social a img,
+        .social svg {
+            inline-size: var(--social-size);
+            block-size:  var(--social-size);
+        }
+        .social svg { fill: #fff; }
+        .social a:hover svg {
+            fill: #ccc;
+        }
+
+        .logo          { height: clamp(70px, 17.5vw, 175px); width: auto; }
+
+        .btn-su {
+            border: 2px solid #fff;
+            padding: .5rem 1.75rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: .5px;
+        }
+        .btn-su:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        /* NAVIGATION -------------------------------------------------------- */
+        .main-nav ul      { list-style: none; display: flex; gap: 2rem; }
+        .main-nav a       { color: #fff; text-decoration: none; font-weight: 400; letter-spacing: .03em; font-size: .9rem; }
+        .main-nav a:hover {
+            color: var(--brand-gold);
+            text-decoration: none;
+        }
+
+        /* HERO TAGLINE ------------------------------------------------------ */
+        .hero        { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: .5rem; padding: 1rem 1.5rem; }
+        .tagline     { color: #fff; font-weight: 800; text-transform: uppercase; }
+        .small-tag   { font-size: clamp(0.5rem, 4vw, 2rem); letter-spacing: .5px; }
+        .big-tag     { font-size: clamp(1rem, 8vw, 4rem); white-space: nowrap; }
+
+        /* MOBILE TWEAKS ----------------------------------------------------- */
+        @media (max-width: 600px) {
+            .header-top {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.75rem;
+            }
+            .logo {
+                order: 1;
+                width: 60%;
+                max-width: 300px;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+            }
+            .social {
+                order: 2;
+            }
+            .btn-su {
+                order: 3;
+            }
+            .main-nav ul {
+                flex-wrap: wrap;
+                gap: 1rem;
+                justify-content: center;
+            }
+            .small-tag { font-size: 1rem; }
+            .big-tag   { font-size: 2rem; }
+            .hero      { padding: 1rem; }
+        }
+
+        @media (min-width: 1024px) {
+            .small-tag { font-size: clamp(1rem, 2vw, 2rem); }
+            .big-tag   { font-size: clamp(2rem, 4vw, 4rem); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+        <!-- Top row: social icons – logo – SU button -->
+        <div class="header-top">
+            <div class="social">
+                <a href="https://www.instagram.com/uonskydiving/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm8.25 1.75a.75.75 0 110 1.5.75.75 0 010-1.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z"/>
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/UoNSkydiving" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M22.675 0h-21.35C.596 0 0 .6 0 1.337v21.326C0 23.4.596 24 1.325 24h11.496v-9.294H9.692v-3.622h3.129V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.464.098 2.794.142v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.312h3.587l-.467 3.622H16.56V24h6.115c.729 0 1.325-.6 1.325-1.337V1.337C24 .6 23.404 0 22.675 0z"/>
+                    </svg>
+                </a>
+                <a href="https://www.youtube.com/@uonskydiving1700" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M23.498 6.186a2.997 2.997 0 00-2.11-2.12C19.645 3.444 12 3.444 12 3.444s-7.644 0-9.388.622a2.997 2.997 0 00-2.11 2.12C0 7.932 0 12 0 12s0 4.069.502 5.814a2.997 2.997 0 002.11 2.12c1.744.622 9.388.622 9.388.622s7.645 0 9.389-.622a2.997 2.997 0 002.11-2.12C24 16.068 24 12 24 12s0-4.068-.502-5.814-.502-5.814-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                </a>
+            </div>
+
+            <a href="index.html">
+                <img src="images/header_logo.png"
+                     alt="University of Nottingham Sport – Skydiving"
+                     class="logo">
+            </a>
+
+            <a href="https://su.nottingham.ac.uk/activities/view/skydive" target="_blank" rel="noopener noreferrer" class="btn-su">UoNSU</a>
+        </div>
+
+        <!-- Bottom row: primary navigation -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="info.html">Info</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="licence.html">Getting your licence</a></li>
+                <li><a href="dashboard.html">Members' Dashboard</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ================= MAIN / HERO ================= -->
+    <main class="hero">
+        <h2 class="tagline small-tag">WHERE THE SKY’S NOT THE LIMIT,</h2>
+        <h1 class="tagline big-tag">IT’S OUR PLAYGROUND</h1>
+    </main>
+
+</body>
+</html>
