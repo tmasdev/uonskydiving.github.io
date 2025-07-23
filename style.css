@@ -1,0 +1,139 @@
+:root {
+    --brand-gold: rgb(215, 181, 61);
+    --header-grad-from: rgba(0, 0, 0, 0.6);
+    --header-grad-mid: rgba(0, 0, 0, 0.3);
+    --social-size: 28px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Soho', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: url('Images/home_page_background.png') 50% 70%/cover no-repeat;
+    z-index: -1;
+}
+
+/* HEADER ------------------------------------------------------------ */
+.site-header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    color: #fff;
+}
+
+.site-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -20px;
+    background: linear-gradient(
+        to bottom,
+        var(--header-grad-from) 0%,
+        var(--header-grad-mid) 75%,
+        transparent 100%
+    );
+    z-index: -1;
+}
+
+.header-top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 2rem;
+}
+
+.social { display: flex; gap: 2rem; }
+.social svg {
+    inline-size: var(--social-size);
+    block-size:  var(--social-size);
+    fill: #fff;
+}
+.social a:hover svg { fill: #ccc; }
+
+.logo { height: clamp(70px, 17.5vw, 175px); width: auto; }
+
+.btn-su {
+    border: 3px solid #fff;
+    padding: 1rem 3rem;
+    font-family: 'Soho Std Regular', 'Soho', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: .5px;
+}
+.btn-su:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* NAVIGATION -------------------------------------------------------- */
+.main-nav ul      { list-style: none; display: flex; gap: 2rem; }
+.main-nav a       {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Soho Std Light', 'Soho', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    font-weight: 300;
+    letter-spacing: .03em;
+    font-size: .9rem;
+    text-transform: uppercase;
+}
+.main-nav a:hover { color: var(--brand-gold); }
+.main-nav .active { border-bottom: 2px solid #fff; }
+
+/* HERO TAGLINE ------------------------------------------------------ */
+.hero        { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: .5rem; padding: 1rem 1.5rem; }
+.tagline     { color: #fff; font-weight: 800; text-transform: uppercase; }
+.small-tag   { font-size: clamp(0.5rem, 4vw, 2rem); letter-spacing: .5px; }
+.big-tag     { font-size: clamp(1rem, 8vw, 4rem); white-space: nowrap; }
+
+/* MOBILE TWEAKS ----------------------------------------------------- */
+@media (max-width: 600px) {
+    .header-top {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    .logo {
+        order: 1;
+        width: 60%;
+        max-width: 300px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    .social { order: 2; }
+    .btn-su { order: 3; }
+    .main-nav ul {
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+    .small-tag { font-size: 1rem; }
+    .big-tag   { font-size: 2rem; }
+    .hero      { padding: 1rem; }
+}
+
+@media (min-width: 1024px) {
+    .small-tag { font-size: clamp(1rem, 2vw, 2rem); }
+    .big-tag   { font-size: clamp(2rem, 4vw, 4rem); }
+}
