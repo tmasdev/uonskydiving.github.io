@@ -51,7 +51,13 @@
                 transparent            100%);
             z-index: -1;   /* stays behind header children */
         }
-        .header-top    { width: 100%; display: flex; align-items: center; justify-content: space-between; }
+        .header-top    { 
+            width: 100%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            padding-block: 2rem;  /* increased vertical padding */ 
+        }
         .social        { display: flex; gap: 2rem; }
         .social a img,
         .social svg {
@@ -66,10 +72,11 @@
         .logo          { height: clamp(70px, 17.5vw, 175px); width: auto; }
 
         .btn-su {
-            border: 2px solid #fff;
-            padding: .5rem 1.75rem;
-            text-transform: uppercase;
-            font-weight: 600;
+            border: 3px solid #fff;
+            padding: 1rem 3rem;          /* bigger box */
+            font-family: 'Soho Std Regular', 'Soho', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+            font-weight: 300;
+            font-size: 0.8rem;           /* slightly smaller text */
             color: #fff;
             text-decoration: none;
             letter-spacing: .5px;
@@ -81,7 +88,7 @@
 
         /* NAVIGATION -------------------------------------------------------- */
         .main-nav ul      { list-style: none; display: flex; gap: 2rem; }
-        .main-nav a       { color: #fff; text-decoration: none; font-weight: 400; letter-spacing: .03em; font-size: .9rem; }
+        .main-nav a       { color: #fff; text-decoration: none; font-family: 'Soho Std Light', 'Soho', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; font-weight: 300; letter-spacing: .03em; font-size: .9rem; text-transform: uppercase; }
         .main-nav a:hover {
             color: var(--brand-gold);
             text-decoration: none;
@@ -166,11 +173,11 @@
         <!-- Bottom row: primary navigation -->
         <nav class="main-nav">
             <ul>
-                <li><a href="info.html">Info</a></li>
-                <li><a href="faqs.html">FAQs</a></li>
-                <li><a href="licence.html">Getting your licence</a></li>
-                <li><a href="dashboard.html">Members' Dashboard</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="info.html">INFO</a></li>
+                <li><a href="faqs.html">FAQS</a></li>
+                <li><a href="licence.html">GETTING YOUR LICENCE</a></li>
+                <li><a href="dashboard.html">MEMBERS' DASHBOARD</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
             </ul>
         </nav>
     </header>
