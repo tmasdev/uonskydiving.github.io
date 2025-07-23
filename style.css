@@ -137,3 +137,140 @@ body::before {
     .small-tag { font-size: clamp(1rem, 2vw, 2rem); }
     .big-tag   { font-size: clamp(2rem, 4vw, 4rem); }
 }
+
+/* INFO PAGE LAYOUT ------------------------------------------------ */
+.info-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 1.5rem 1.5rem 3rem;
+}
+.about-text {
+    flex: 1 1 300px;
+    line-height: 1.6;
+    font-size: clamp(1.4rem, 2vw, 1.6rem);
+    font-family: 'Soho Std Light','Soho', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    font-weight: 300;
+}
+.soho-light {
+    font-family: 'Soho Std Light','Soho', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    font-weight: 300;
+}
+.about-section { display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start; }
+.about-text b { font-weight: 800; }
+.about-map { flex: 0 1 350px; height: 350px; max-width: 450px; }
+.about-map iframe { width: 100%; height: 100%; border: 0; }
+.btn-langar { margin-top: 2rem; display: inline-block; }
+
+/* TILE GRID ------------------------------------------------------- */
+.tile-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 2rem; text-align: center; }
+@media (max-width: 700px) {
+    .tile-grid { display: flex; flex-direction: column; gap: 2rem; align-items: center; }
+    .tile-grid > a { width: 100%; max-width: 340px; }
+}
+.tile-grid img { width: 100%; height: auto; display: block; }
+.tile-grid a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Soho Std Light','Soho', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    font-weight: 800;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+}
+.tile-grid a span { display: inline-block; margin-top: .75rem; border-bottom: 2px solid #fff; }
+.tile-grid a:hover span { color: var(--brand-gold); border-bottom-color: var(--brand-gold); }
+
+@media (max-width: 700px) {
+    .main-nav,
+    .social,
+    .header-btn { display: none; }
+}
+@media (min-width: 701px) {
+    .mobile-overlay { display: none !important; }
+    #nav-toggle { display: none; }
+}
+
+/* MOBILE MENU ----------------------------------------------------- */
+.mobile-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.85);
+    display: none;
+    z-index: 998;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1.75rem 3rem;
+    overflow: hidden;
+}
+.mobile-overlay .mobile-menu {
+    width: 100%;
+    max-width: 480px;
+    background: transparent;
+    box-shadow: none;
+    padding-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.mobile-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    font-size: 1.75rem;
+    text-align: left;
+    margin: 0;
+    width: 100%;
+}
+.mobile-links li { width: 100%; }
+.mobile-social {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: .75rem;
+}
+.mobile-btn {
+    display: block;
+    padding: 1rem 3rem;
+    max-width: 300px;
+    margin: 0 auto .75rem;
+}
+.mobile-links a {
+    color: #fff !important;
+    text-decoration: none;
+    font-family: 'Soho Std Light','Soho', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    font-weight: 300;
+}
+.hamburger {
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    width: 40px;
+    height: 40px;
+    z-index: 1001;
+    cursor: pointer;
+    display: inline-block;
+}
+.hamburger span {
+    position: absolute;
+    left: 8px;
+    width: 24px;
+    height: 3px;
+    background: #fff;
+    transition: transform .25s ease;
+    transform-origin: center;
+}
+.hamburger span:first-child { top: 12px; }
+.hamburger span:last-child  { top: 25px; }
+#nav-toggle:checked ~ .site-header .hamburger span:first-child {
+    top: 19px;
+    transform: rotate(45deg);
+}
+#nav-toggle:checked ~ .site-header .hamburger span:last-child {
+    top: 19px;
+    transform: rotate(-45deg);
+}
+#nav-toggle:checked ~ .mobile-overlay { display: flex; }
