@@ -1,0 +1,45 @@
+
+
+UoN Skydiving Club – Design Style Guide for AI Agent:
+
+1. Background Images:
+   - Full viewport images with CSS cover sizing.
+   - Use focal point positioning or crop for landscape orientation.
+
+2. Typography:
+   - Primary Font: Soho Std (Regular for main buttons/nav; Light for secondary text).
+   - Headings/taglines bold, uppercase, responsive with CSS clamp().
+
+3. Header:
+   - Center-aligned content (logo, socials, navigation).
+   - Gradient overlay: black 60% opacity at top, fading to transparent below header.
+   - Responsive vertical stacking on small screens (≤600px).
+
+4. Navigation:
+   - Horizontal flex with responsive wrap below 800px width.
+   - Uppercase links without underline.
+   - Hover colour: gold (rgb(215,181,61)).
+
+5. Buttons:
+   - Outlined style: white border, transparent background.
+   - Hover reverses colours: white fill, black text.
+   - Padding: 1rem vertical, 3rem horizontal; Border thickness: 3px.
+
+6. Logo:
+   - Centered with responsive height (clamp(70px, 17.5vw, 175px)).
+   - Width adjusts on mobile (60% width, max-width 300px).
+
+7. Social Media Icons:
+   - White inline SVGs, hover turns grey (#ccc).
+   - Fixed size: 28px.
+
+8. Text Colours:
+   - White primarily, gold accent (navigation hovers).
+
+9. Spacing and Padding:
+   - Generous header vertical padding (2rem).
+   - Padding around content to prevent overflow on small screens.
+
+10. Responsive Design:
+   - Media queries at widths: ≤600px (mobile), ≤800px (tablet), ≥1024px (desktop).
+   - Emphasis on readability, legibility, consistent layout.
