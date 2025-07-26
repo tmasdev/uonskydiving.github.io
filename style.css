@@ -277,14 +277,12 @@ body::before {
 }
 #nav-toggle:checked ~ .mobile-overlay { display: flex; }
 /* FAQ PAGE STYLES ------------------------------------------------- */
-.faq-hero {
-    min-height: 80px;
-    align-items: flex-start;
-    text-align: left;
+.faq-section {
+    padding: 3rem 1.5rem 2rem;
 }
 
-.faq-section {
-    padding: 2rem 1.5rem;
+.faq-section .page-title {
+    padding-bottom: 1rem;
 }
 
 .faq-container {
