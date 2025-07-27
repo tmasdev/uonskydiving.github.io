@@ -317,3 +317,70 @@ body::before {
     color: #fff;
     text-decoration: underline;
 }
+
+/* LICENCE PAGE STYLES -------------------------------------------- */
+.licence-hero {
+    position: relative;
+    overflow: hidden;
+}
+.licence-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('Images/home_page_background.png') center/cover no-repeat;
+    filter: blur(4px) brightness(0.6);
+    z-index: -1;
+}
+
+.licence-section {
+    padding: 5rem 1.5rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    text-transform: uppercase;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.licence-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.text-content {
+    flex: 1 1 300px;
+    line-height: 1.6;
+    font-family: 'Soho Std Light','Soho', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    font-weight: 300;
+}
+
+.image-content {
+    flex: 0 1 350px;
+}
+.image-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.course-comparison p {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-family: 'Soho Std Light','Soho', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    font-weight: 300;
+}
+
+.course-comparison .note {
+    font-style: italic;
+}
+
+.course-comparison strong {
+    font-weight: 800;
+}
