@@ -23,7 +23,7 @@ body::before {
     content: '';
     position: fixed;
     inset: 0;
-    background: url('Images/home_page_background.png') 50% 70%/cover no-repeat;
+    background: url('Images/Home Page Background.png') 50% 70%/cover no-repeat;
     z-index: -1;
 }
 
@@ -327,7 +327,7 @@ body::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: url('Images/home_page_background.png') center/cover no-repeat;
+    background: url('Images/Home Page Background.png') center/cover no-repeat;
     filter: blur(4px) brightness(0.6);
     z-index: -1;
 }
