@@ -19,20 +19,28 @@ html, body {
     color: #fff;
 }
 
+body {
+    position: relative;
+    background-color: #000;
+}
+
 body::before {
     content: '';
-    position: fixed;
-    inset: 0;
-    background: #000 url('Images/Home Page Background.png') center top/cover no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: url('Images/Home Page Background.png') top center/100% auto no-repeat;
     z-index: -1;
 }
 
 body.info-page::before {
-    background: #000 url('Images/Exit Background.webp') center top/cover no-repeat;
+    background: url('Images/Exit Background.webp') top center/100% auto no-repeat;
 }
 
 body.faqs-page::before {
-    background: #000 url('Images/Wing Tip Background.webp') center top/cover no-repeat;
+    background: url('Images/Wing Tip Background.webp') top center/100% auto no-repeat;
 }
 
 /* HEADER ------------------------------------------------------------ */
@@ -174,7 +182,7 @@ body.faqs-page::before {
 .about-row { display: flex; flex-wrap: nowrap; gap: 2rem; align-items: flex-start; }
 .about-column { flex: 1 1 50%; }
 .about-text b { font-weight: 800; }
-.about-map { flex: 1 1 50%; aspect-ratio: 4 / 3; }
+.about-map { flex: 1 1 50%; aspect-ratio: 2 / 1; }
 .about-map iframe { width: 100%; height: 100%; border: 0; }
 .btn-langar { margin-top: 2rem; display: inline-block; }
 .soho-font {
