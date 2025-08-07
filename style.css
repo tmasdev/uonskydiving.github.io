@@ -32,7 +32,7 @@ body::before {
     right: 0;
     height: 100%;
     background: url('Images/Home Page Background.png') top center/100% auto no-repeat;
-    z-index: -1;
+    z-index: -2;
 }
 
 body.info-page::before {
@@ -41,6 +41,17 @@ body.info-page::before {
 
 body.faqs-page::before {
     background: url('Images/Wing Tip Background.webp') top center/100% auto no-repeat;
+}
+
+body:not(.home-page)::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.25);
+    z-index: -1;
 }
 
 /* HEADER ------------------------------------------------------------ */
@@ -165,7 +176,7 @@ body.faqs-page::before {
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    padding: 1.5rem 1.5rem 3rem;
+    padding: 2rem 1.5rem 3rem;
 }
 .info-main .page-title {
     font-family: 'Futura', sans-serif;
