@@ -43,18 +43,6 @@ body.faqs-page::before {
     background: url('Images/Wing Tip Background.webp') top center/100% auto no-repeat;
 }
 
-body.bg-tint::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.1);
-    pointer-events: none;
-    z-index: -1;
-}
-
 /* HEADER ------------------------------------------------------------ */
 .site-header {
     position: relative;
@@ -177,7 +165,7 @@ body.bg-tint::after {
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    padding: 2.5rem 1.5rem 3rem;
+    padding: 1.5rem 1.5rem 3rem;
 }
 .info-main .page-title {
     font-family: 'Futura', sans-serif;
