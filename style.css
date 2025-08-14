@@ -518,3 +518,57 @@ body.contact-page::after {
 .contact-btn {
     margin-top: 1rem;
 }
+
+/* HOW TO JOIN PAGE STYLES -------------------------------------- */
+.join-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.join-text {
+    flex: 1 1 300px;
+    max-width: 75ch;
+    line-height: 1.6;
+    font-family: 'Soho Std Light','Soho', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    font-weight: 300;
+}
+
+.join-text p + p {
+    margin-top: 1rem;
+}
+
+.join-image {
+    flex: 1 1 350px;
+}
+
+.join-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    aspect-ratio: 3 / 2;
+    display: block;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin: 2rem 1.5rem 3rem;
+}
+
+.cta-buttons a {
+    flex: 1 1 200px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .join-image { margin-top: 2rem; }
+    .cta-buttons a { flex-basis: 100%; }
+}
