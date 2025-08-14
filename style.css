@@ -410,10 +410,18 @@ body:not(.home-page)::after {
     font-family: 'Futura PT', 'Futura', sans-serif;
 }
 
-.faq-item p {
+.faq-item p,
+.text-content,
+.course-comparison p,
+.course-right p,
+.join-text,
+.course-copy {
     line-height: 1.6;
     font-family: 'Soho Std Light','Soho', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
     font-weight: 300;
+}
+
+.faq-item p {
     font-size: 1.1rem;
     margin-bottom: 2rem;
 }
@@ -461,9 +469,6 @@ body:not(.home-page)::after {
 
 .text-content {
     flex: 1 1 300px;
-    line-height: 1.6;
-    font-family: 'Soho Std Light','Soho', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-    font-weight: 300;
 }
 
 .image-content {
@@ -476,10 +481,7 @@ body:not(.home-page)::after {
 }
 
 .course-comparison p {
-    line-height: 1.6;
     margin-bottom: 1.5rem;
-    font-family: 'Soho Std Light','Soho', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-    font-weight: 300;
 }
 
 .course-comparison .note {
@@ -701,9 +703,6 @@ body.contact-page::after {
 }
 
 .course-right p {
-    line-height: 1.6;
-    font-family: 'Soho Std Light','Soho', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-    font-weight: 300;
     margin-bottom: 1rem;
 }
 
@@ -1003,10 +1002,6 @@ body.committee-page::before {
 .join-text {
     flex: 1 1 300px;
     max-width: 75ch;
-
-    line-height: 1.6;
-    font-family: 'Soho Std Light','Soho', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-    font-weight: 300;
 }
 
 .video-container {
@@ -1027,9 +1022,6 @@ body.committee-page::before {
 
 .course-copy {
     margin-top: 1rem;
-    line-height: 1.6;
-    font-family: 'Soho Std Light','Soho', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-    font-weight: 300;
 }
 
 @media (max-width: 600px) {
