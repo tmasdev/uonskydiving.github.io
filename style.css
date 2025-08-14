@@ -200,12 +200,20 @@ body:not(.home-page)::after {
     font-family: 'Soho Std', 'Soho', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 }
 
+/* BUTTON GRID ---------------------------------------------------- */
+.btn-grid { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 1rem; }
+.btn-grid a { flex: 1 1 200px; text-align: center; }
+
 @media (max-width: 700px) {
     .about-row { flex-direction: column; }
 }
 
 /* TILE GRID ------------------------------------------------------- */
 .tile-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 2rem; text-align: center; }
+/* BUTTON GRID ---------------------------------------------------- */
+.btn-grid { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 1rem; }
+.btn-grid a { flex: 1 1 200px; text-align: center; }
+
 @media (max-width: 700px) {
     .tile-grid { display: flex; flex-direction: column; gap: 2rem; align-items: center; }
     .tile-grid > a { width: 100%; max-width: 340px; }
@@ -222,6 +230,10 @@ body:not(.home-page)::after {
 }
 .tile-grid a span { display: inline-block; margin-top: .75rem; border-bottom: 2px solid #fff; }
 .tile-grid a:hover span { color: var(--brand-gold); border-bottom-color: var(--brand-gold); }
+
+/* BUTTON GRID ---------------------------------------------------- */
+.btn-grid { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 1rem; }
+.btn-grid a { flex: 1 1 200px; text-align: center; }
 
 @media (max-width: 700px) {
     .main-nav,
