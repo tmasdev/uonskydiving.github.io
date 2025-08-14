@@ -519,6 +519,150 @@ body.contact-page::after {
     margin-top: 1rem;
 }
 
+
+/* HISTORY & LEGACY PAGE STYLES ----------------------------------- */
+.legacy-hero {
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+}
+.legacy-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('Images/Canopy Through Trees Background.webp') center/cover no-repeat;
+    filter: brightness(0.4);
+    z-index: -1;
+}
+
+.presidents-gallery { background-color: #000; }
+
+.president-backdrop {
+    position: relative;
+}
+.president-backdrop::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('Images/Langar Evening Background.webp') center/cover no-repeat;
+    filter: brightness(0.4);
+    z-index: -1;
+}
+
+.president-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+}
+
+.president-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+}
+.president-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+
+.president-caption {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.outline-btn {
+    display: inline-block;
+    border: 2px solid #fff;
+    padding: 0.4rem 0.75rem;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+.outline-btn:hover,
+.outline-btn:focus {
+    background: #fff;
+    color: #000;
+}
+.outline-btn:focus {
+    outline: 2px solid var(--brand-gold);
+    outline-offset: 2px;
+}
+
+.president-legacy {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+}
+.president-legacy .outline-btn { margin-top: 0.5rem; }
+
+.alumni-cta {
+    background: #111;
+    padding: 3rem 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+}
+.alumni-cta a { color: #fff; text-decoration: underline; }
+
+.achievements {
+    padding: 3rem 1.5rem;
+}
+.achievements h2 {
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0,1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.achieve-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1rem;
+    border: 2px solid #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+.achieve-box:hover,
+.achieve-box:focus {
+    background: #fff;
+    color: #000;
+}
+
+@media (max-width: 1023px) {
+    .president-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .achievements-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+
+@media (max-width: 639px) {
+    .president-grid { grid-template-columns: repeat(1, minmax(0,1fr)); }
+    .achievements-grid { grid-template-columns: repeat(1, minmax(0,1fr)); }
+    .president-legacy { text-align: center; }
+
 /* HOW TO JOIN PAGE STYLES -------------------------------------- */
 .join-section {
     max-width: 1000px;
@@ -571,4 +715,5 @@ body.contact-page::after {
 @media (max-width: 600px) {
     .join-image { margin-top: 2rem; }
     .cta-buttons a { flex-basis: 100%; }
+
 }
