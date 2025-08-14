@@ -40,7 +40,10 @@ body.info-page::before {
 }
 
 body.faqs-page::before {
-    background: url('Images/Wing Tip Background.webp') top center/100% auto no-repeat;
+    background-image: url('Images/Wing Tip Background.webp');
+    background-position: center 0;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 body:not(.home-page)::after {
@@ -429,6 +432,10 @@ body:not(.home-page)::after {
 .faq-item a {
     color: #fff;
     text-decoration: underline;
+}
+
+.faq-item a:visited {
+    color: #fff;
 }
 
 /* LICENCE PAGE STYLES -------------------------------------------- */
