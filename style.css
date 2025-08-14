@@ -463,3 +463,86 @@ body.contact-page::after {
 .contact-btn {
     margin-top: 1rem;
 }
+
+/* COMMITTEE PAGE STYLES -------------------------------------------- */
+body.committee-page::before {
+    background: none;
+}
+
+.committee-hero {
+    background: url('Images/Langar Evening Background.webp') center/cover no-repeat;
+}
+
+.committee {
+    padding: 3rem 1.5rem 0;
+}
+
+.committee-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem 2rem;
+    justify-items: start;
+}
+
+.committee-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    transition: transform 0.2s ease;
+    display: block;
+}
+
+.committee-card:hover img {
+    transform: translateY(-4px);
+}
+
+.committee-name {
+    margin-top: 0.75rem;
+    font-weight: 800;
+    font-size: 1.25rem;
+}
+
+.committee-role {
+    margin-top: 0.25rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #ccc;
+}
+
+.qualifiers {
+    padding: 3rem 1.5rem;
+}
+
+.qualifiers-heading {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.qualifiers-subheading {
+    margin-top: 0.25rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-family: 'Soho Std Light','Soho', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    font-weight: 300;
+}
+
+.qualifiers-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 800px) {
+    .committee-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .committee-grid {
+        grid-template-columns: 1fr;
+    }
+}
