@@ -57,6 +57,25 @@ body:not(.home-page)::after {
     z-index: -1;
 }
 
+/* LAYOUT UTILITIES ----------------------------------------------- */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.section {
+    padding: 2rem 0;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2rem 0 3rem;
+}
+
 /* HEADER ------------------------------------------------------------ */
 .site-header {
     position: relative;
@@ -173,15 +192,8 @@ body:not(.home-page)::after {
     .big-tag   { font-size: clamp(2.5rem, 5vw, 5rem); }
 }
 
-/* INFO PAGE LAYOUT ------------------------------------------------ */
-.info-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    padding: 2rem 1.5rem 3rem;
-}
-.info-main .page-title {
+/* PAGE CONTENT ---------------------------------------------------- */
+.content .page-title {
     font-family: 'Futura', sans-serif;
     font-size: clamp(2rem, 5vw, 2.5rem);
 }
@@ -335,7 +347,6 @@ body:not(.home-page)::after {
 
 /* PRICING PAGE STYLES -------------------------------------------- */
 .pricing-section {
-    padding: 5rem 1.5rem 2rem;
 }
 
 .pricing-section h2 {
@@ -390,7 +401,6 @@ body:not(.home-page)::after {
 /* FAQ PAGE STYLES ------------------------------------------------- */
 
 .faq-section {
-    padding: 5rem 1.5rem 2rem;
 }
 
 .faq-section .page-title {
@@ -452,12 +462,6 @@ body:not(.home-page)::after {
     z-index: -1;
 }
 
-.licence-section {
-    padding: 5rem 1.5rem 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
 .section-title {
     font-size: clamp(2rem, 5vw, 2.5rem);
     text-transform: uppercase;
@@ -508,7 +512,7 @@ body.contact-page::after {
     background: rgba(0,0,0,0.5);
 }
 
-.contact-hero {
+.hero.centered {
     justify-content: center;
 }
 
@@ -530,9 +534,6 @@ body.contact-page::after {
 
 /* CATEGORY SYSTEM PAGE STYLES ------------------------------------ */
 .intro-summary {
-    padding: 5rem 1.5rem 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
 }
 
 .intro-list {
@@ -548,15 +549,9 @@ body.contact-page::after {
 }
 
 .course-overview {
-    padding: 5rem 1.5rem 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
 }
 
 .course-section {
-    padding: 5rem 1.5rem 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
 }
 
 .course-container {
@@ -755,15 +750,12 @@ body.committee-page::before {
 }
 
 .committee-section {
-    padding: 4rem 1.5rem 3rem;
     background-color: #000;
 }
 
 .committee-grid {
     display: grid;
     gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
     grid-template-columns: 1fr;
 }
 
@@ -801,10 +793,7 @@ body.committee-page::before {
 }
 
 .qualifiers-section {
-    padding: 4rem 1.5rem;
     background-color: #000;
-    max-width: 800px;
-    margin: 0 auto;
 }
 
 .qualifiers-list {
@@ -885,9 +874,6 @@ body.committee-page::before {
     display: grid;
     grid-template-columns: repeat(3, minmax(0,1fr));
     gap: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 4rem 1.5rem;
 }
 
 .president-card {
@@ -931,15 +917,12 @@ body.committee-page::before {
 }
 
 .president-legacy {
-    max-width: 1000px;
     margin: 4rem auto;
-    padding: 0 1.5rem;
 }
 .president-legacy .outline-btn { margin-top: 0.5rem; }
 
 .alumni-cta {
     background: #111;
-    padding: 3rem 1.5rem;
     font-size: 1.25rem;
     font-weight: 700;
     line-height: 1.6;
@@ -948,7 +931,6 @@ body.committee-page::before {
 .alumni-cta a { color: #fff; text-decoration: underline; }
 
 .achievements {
-    padding: 3rem 1.5rem;
 }
 .achievements h2 {
     text-align: center;
@@ -963,8 +945,6 @@ body.committee-page::before {
     display: grid;
     grid-template-columns: repeat(4, minmax(0,1fr));
     gap: 1.5rem;
-    max-width: 1000px;
-    margin: 0 auto;
 }
 .achieve-box {
     display: flex;
@@ -997,9 +977,6 @@ body.committee-page::before {
 
 /* HOW TO JOIN PAGE STYLES -------------------------------------- */
 .join-section {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 2rem 1.5rem;
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
