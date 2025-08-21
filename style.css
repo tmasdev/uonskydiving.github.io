@@ -46,6 +46,10 @@ body.faqs-page::before {
     background-repeat: no-repeat;
 }
 
+body.licence-page::before {
+    background: url('Images/Canopy Through Trees Background.webp') top center/cover no-repeat;
+}
+
 body:not(.home-page)::after {
     content: '';
     position: absolute;
@@ -213,26 +217,27 @@ body:not(.home-page)::after {
 
 /* TILE GRID ------------------------------------------------------- */
 .tile-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 2rem; text-align: center; }
-/* BUTTON GRID ---------------------------------------------------- */
-.btn-grid { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 1rem; }
-.btn-grid a { flex: 1 1 200px; text-align: center; }
 
 @media (max-width: 700px) {
     .tile-grid { display: flex; flex-direction: column; gap: 2rem; align-items: center; }
     .tile-grid > a { width: 100%; max-width: 340px; }
 }
-.tile-grid img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+.tile-grid img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: center; display: block; }
 .tile-grid a {
+    position: relative;
     text-decoration: none;
     color: #fff;
     font-family: 'Soho Std Light','Soho', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
     font-weight: 800;
     font-size: 1.25rem;
-    text-transform: uppercase;
     letter-spacing: .03em;
 }
-.tile-grid a span { display: inline-block; margin-top: .75rem; border-bottom: 2px solid #fff; }
-.tile-grid a:hover span { color: var(--brand-gold); border-bottom-color: var(--brand-gold); }
+.tile-grid a span {
+    position: absolute;
+    left: 1rem;
+    bottom: 20%;
+}
+.tile-grid a:hover span { color: var(--brand-gold); }
 
 /* BUTTON GRID ---------------------------------------------------- */
 .btn-grid { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 1rem; }
@@ -439,64 +444,20 @@ body:not(.home-page)::after {
 }
 
 /* LICENCE PAGE STYLES -------------------------------------------- */
-.licence-hero {
-    position: relative;
-    overflow: hidden;
-}
-.licence-hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: url('Images/Home Page Background.png') center/cover no-repeat;
-    filter: blur(4px) brightness(0.6);
-    z-index: -1;
+.licence-page .tagline {
+    font-family: 'Futura PT', 'Futura', sans-serif;
 }
 
-.licence-section {
-    padding: 5rem 1.5rem 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
+.licence-page .hero-text {
+    text-align: left;
 }
 
-.section-title {
-    font-size: clamp(2rem, 5vw, 2.5rem);
-    text-transform: uppercase;
-    font-weight: 800;
-    text-align: center;
-    margin-bottom: 2rem;
+.licence-page .big-tag {
+    white-space: normal;
 }
 
-.licence-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    align-items: center;
-    margin-bottom: 2rem;
-}
-
-.text-content {
-    flex: 1 1 300px;
-}
-
-.image-content {
-    flex: 0 1 350px;
-}
-.image-content img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.course-comparison p {
-    margin-bottom: 1.5rem;
-}
-
-.course-comparison .note {
-    font-style: italic;
-}
-
-.course-comparison strong {
-    font-weight: 800;
+.licence-page .tile-grid {
+    grid-template-columns: repeat(2, minmax(0,1fr));
 }
 
 body.contact-page::before {
@@ -625,6 +586,12 @@ body.contact-page::after {
     height: auto;
     display: block;
     box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+.course-intro p {
+    font-family: 'Soho Std', 'Soho', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    font-weight: 400;
+    margin-bottom: 1rem;
 }
 
 .hero-list {
