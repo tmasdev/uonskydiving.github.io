@@ -61,6 +61,16 @@ body:not(.home-page)::after {
     z-index: -1;
 }
 
+/* LAYOUT ------------------------------------------------------------ */
+.container {
+    width: min(90%, 1200px);
+    margin-inline: auto;
+}
+
+.section {
+    padding-block: 4rem;
+}
+
 /* HEADER ------------------------------------------------------------ */
 .site-header {
     position: relative;
