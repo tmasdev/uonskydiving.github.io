@@ -464,10 +464,22 @@ body:not(.home-page)::after {
 
 .licence-page .big-tag {
     white-space: normal;
+    font-size: clamp(1rem, 6.7vw, 3.33rem);
 }
 
 .licence-page .tile-grid {
     grid-template-columns: repeat(2, minmax(0,1fr));
+    justify-items: center;
+}
+.licence-page p {
+    font-size: 1.125rem;
+}
+.licence-page .tile-grid a {
+    font-family: 'Futura PT', 'Futura', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    max-width: 250px;
+}
+.licence-page .tile-grid img {
+    aspect-ratio: 4 / 5;
 }
 
 body.contact-page::before {
@@ -693,6 +705,11 @@ body.contact-page::after {
 @media (max-width: 768px) {
     .hero-inner { flex-direction: column; }
     .hero-media img { max-height: 300px; object-fit: cover; }
+    .licence-page .hero-inner { flex-direction: row; }
+}
+@media (max-width: 600px) {
+    .licence-page .hero-inner { flex-direction: column; }
+}
 
 /* COMMITTEE PAGE STYLES ----------------------------------------- */
 body.committee-page::before {
